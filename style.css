@@ -1,35 +1,25 @@
-:root{
-    --fundo-imagem: ;
-    background-image: url(./img/aizen.png);
+:root {
+    --fundo-imagem: url("./img/ichigo.jpg");
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-}
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: var(--fundo-imagem);
-    transition: background- 1s;
+body {
+    background-image: var(--imagem-fundo);
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    transition: background-image 0.3s;
 }
 
-input{
-    padding: 8px 12px ;
-    font-size: 24px;
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+#mudar-img {
+    margin-bottom: 20px;
 
 }
 
-button{
-    padding: 8px 12px ;
-    font-size: 24px;
+button {
+    justify-content: start;
     cursor: pointer;
 }

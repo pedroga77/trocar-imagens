@@ -1,11 +1,19 @@
-"use strict"
 
-const botaoTrocarImagem = document.getElementById('trocar-imagem')
+"use strict";
 
-const
+const botaoTrocarImagem = document.getElementById('mudar-img')
 
-function trocarImagem () {
-    document.documentElement.style.setProperty('--fundo-imagem')
+const imagens = [
+    'url("./img/aizen.png")',
+    'url("./img/ichigo.jpg")',
+    'url("./img/urahara.png")'
+]
+
+let indiceAtual = 0
+
+function trocarImagem() {
+    indiceAtual = (indiceAtual + 1) % imagens.length
+    document.documentElement.style.setProperty('--imagem-fundo', imagens[indiceAtual])
 }
 
-botaoTrocarcor.addEventListener('click', trocarImagem)
+botaoTrocarImagem.addEventListener('click', trocarImagem)
